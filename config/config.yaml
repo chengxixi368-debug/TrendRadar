@@ -1,4 +1,15 @@
-app:
+notification:
+  enable_notification: true        # 一定要写 true
+
+wework:
+  enable: true
+  corp_id: "ww3d73125de1a9a2dc"
+  agent_id: "1000002"
+  app_secret: "SCYgctEy7C1A-zKsxwAadrMoQfDzPt8MEaPgx9EC-zA"
+  to_user: "15890280958"
+  enable_personal_wechat: true
+  msg_type: "text"
+  app:
   version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version"
   show_version_update: true # 控制显示版本更新提示，如果 false，则不接受新版本提示
 

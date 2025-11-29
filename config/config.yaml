@@ -34,7 +34,14 @@ notification:
   webhooks:
     feishu_url: ""
     dingtalk_url: ""
-    wework_url: ""
+    # 企业微信配置移到此处，并补充wework_url
+    wework_url: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=你的webhook密钥"  # 若用群机器人，填群webhook；若用应用推送，填应用接口
+    wework_corp_id: "ww3d73125de1a9a2dc"          # 新增企业ID
+    wework_agent_id: "1000002"                    # 新增应用ID
+    wework_app_secret: "SCYgctEy7C1A-zKsxwAadrMoQfDzPt8MEaPgx9EC-zA"  # 新增应用Secret
+    wework_to_user: "15890280958"                 # 新增接收人
+    wework_enable_personal_wechat: true           # 新增个人微信转发
+    wework_msg_type: "text"                       # 消息类型
     wework_msg_type: "markdown"
     telegram_bot_token: ""
     telegram_chat_id: ""
@@ -78,11 +85,4 @@ platforms:
   - id: "zhihu"
     name: "知乎"
 
-wework:
-  enable: true
-  corp_id: "ww3d73125de1a9a2dc"
-  agent_id: "1000002"
-  app_secret: "SCYgctEy7C1A-zKsxwAadrMoQfDzPt8MEaPgx9EC-zA"
-  to_user: "15890280958"
-  enable_personal_wechat: true
-  msg_type: "text"
+# 删除独立的wework节点（已合并到notification.webhooks）
